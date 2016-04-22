@@ -1,0 +1,21 @@
+<html>
+    <head>
+	<script src="lib.js"></script>
+	<script src="gameScripts.js"></script>
+    <script src="custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    </head>
+    <link rel="stylesheet" type="text/css" href="gameStyles.css"/>
+	<center>
+		<canvas id="myCanvas"  style="border:3px solid #98999A;">
+			Your browser does not support the HTML5 canvas tag. <br>
+			Try using a more modern browser, like <a href="https://www.google.com/chrome/browser/">Google Chrome</a>,to play the game.
+		</canvas>
+	</center>
+    <script>
+	newGame();
+	setInterval(move,5);
+	
+//var checkStats = setInterval(function(){if(keyIsDown(key.A)){console.log("DOWN");}}, 10); 
+    </script>
+</html>
