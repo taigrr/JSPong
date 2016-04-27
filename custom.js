@@ -1,24 +1,30 @@
 addShortcut(function(){
    toggleFullScreen();   
 },[key.F]);
-
 addShortcut(function(){
-    userDir=-1;    
+    userDir=-1;
+	if(userSpeed<0)
+	{
+		userSpeed=0;
+	}
+	userTimerCount=0;
+	userSpeed-=.25;
+},[key.UP]);
+addRemovalShortcut(function(){
+    userDir=0;
+	userTimerCount+=0.01;
 },[key.UP]);
 addRemovalShortcut(function(){
     userDir=0;    
-},[key.UP]);
-addRemovalShortcut(function(){
-    userDir=0;    
 },[key.DOWN]);
 addShortcut(function(){
-    userDir=1;    
-},[key.DOWN]);
-addRemovalShortcut(function(){
-    console.log(1);    
-},[key.DOWN]);
-addShortcut(function(){
-    console.log(2);
+    userDir=1;
+	if(userSpeed>0)
+	{
+		userSpeed=0;
+	}
+	userTimerCount=0;
+	userSpeed+=.25;    
 },[key.DOWN]);
 
 
